@@ -14,7 +14,7 @@ describe('Users', () => {
         username: 'johndoe'
       })
     expect(201);
-
+    
     expect(validate(response.body.id)).toBe(true);
 
     expect(response.body).toMatchObject({
@@ -38,7 +38,7 @@ describe('Users', () => {
         username: 'johndoe'
       })
       .expect(400);
-
+      
     expect(response.body.error).toBeTruthy();
   });
 
